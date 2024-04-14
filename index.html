@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Snake</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+          rel="stylesheet">
+</head>
+<body>
+<div class="w-full h-full flex flex-row font-pixel">
+    <div class="flex flex-col h-full bg-black p-4">
+        <h1 class="text-center text-4xl text-white py-4">
+            Snake
+        </h1>
+        <div class="text-center text-2xl text-white py-4">
+            <h2>Score: <span id="score">0</span></h2>
+        </div>
+        <form id="new-game" class="flex flex-col">
+            <fieldset class="text-center text-2xl text-white p-4 flex flex-col">
+                <label for="speed">
+                    Speed
+                </label>
+                <input type="range" id="speed" name="speed" min="1" max="10" value="5">
+            </fieldset>
+            <button id="start"
+                    type="submit"
+                    class="text-center text-2xl text-white p-4 bg-green-500 hover:bg-green-700">
+                Start
+            </button>
+        </form>
+    </div>
+    <div class="mx-auto flex flex-col items-center justify-center">
+        <canvas class="block" id="canvas"></canvas>
+    </div>
+    <div>
+
+    </div>
+</div>
+<script type="module" src="/src/main.ts"></script>
+</body>
+</html>
